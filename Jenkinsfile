@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Compiling') {   
       environment {
-        AUTHOR='Apasoft'
+        AUTHOR='Camila'
       }    
       steps {
         echo "Compiling the code"
