@@ -2,7 +2,13 @@ pipeline {
   agent any
   environment {
      NAME = "Jenkins"
-     MACHINE = "Linux"
+     MACHINE = """${
+            sh(
+            returnStdoubt: true,
+            script: 'uname -n'
+            )
+     
+     }"""
      JAVA_OPTS="-Xms128m -Xmx512m"
   }
   stages {
